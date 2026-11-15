@@ -1,14 +1,17 @@
-
 {
   "name": "nexo-quiz-server",
   "version": "1.0.0",
-  "description": "Serveur OAuth2 de NEXO QUIZ",
+  "description": "Serveur OAuth2 et frontend de NEXO QUIZ",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "vite build",
+    "dev": "vite"
   },
   "dependencies": {
+    "@discord/embedded-app-sdk": "^2.5.0",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "dotenv": "^17.2.3"
+    "vite": "^8.3.8"
   }
 }
