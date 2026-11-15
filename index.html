@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -5,49 +6,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#090d1b">
   <title>NEXO QUIZ</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <main class="app">
     <header class="topbar">
-      <div class="brand"><span class="brand-mark">N</span><div><b>NEXO QUIZ</b><small>Le défi commence ici</small></div></div>
+      <div class="brand">
+        <span class="brand-mark">N</span>
+        <div>
+          <b>NEXO QUIZ</b>
+          <small>Le défi commence ici</small>
+        </div>
+      </div>
       <span class="pill">BÊTA</span>
     </header>
+
+    <section id="discordStatus" class="notice">
+      Connexion à Discord en cours...
+    </section>
 
     <section id="home" class="panel hero">
       <div class="eyebrow">⚡ MINI-JEU COMMUNAUTAIRE</div>
       <h1>Teste tes<br><span>connaissances.</span></h1>
       <p>Réponds vite, gagne des points et bats ton meilleur score.</p>
+
       <div class="mode-grid">
-        <button class="mode selected" id="soloMode"><strong>👤 Solo</strong><small>Joue à ton rythme</small></button>
-        <button class="mode" id="groupMode"><strong>👥 Groupe</strong><small>Jouer avec des amis</small></button>
+        <button class="mode selected" id="soloMode">
+          <strong>👤 Solo</strong>
+          <small>Joue à ton rythme</small>
+        </button>
+        <button class="mode" id="groupMode">
+          <strong>👥 Groupe</strong>
+          <small>Jouer avec des amis</small>
+        </button>
       </div>
-      <div id="groupInfo" class="notice hidden">Le salon de groupe est une maquette pour cette première version. Le vrai multijoueur synchronisé sera ajouté avec un serveur de jeu.</div>
-      <button id="startBtn" class="primary">COMMENCER <span>→</span></button>
-      <div class="stats"><div><b>10</b><small>Questions</small></div><div><b>4</b><small>Choix par question</small></div><div><b>🏆</b><small>Score final</small></div></div>
+
+      <div id="groupInfo" class="notice hidden">
+        Le salon de groupe est une maquette pour cette première version.
+      </div>
+
+      <button id="startBtn" class="primary">
+        COMMENCER <span>→</span>
+      </button>
+
+      <div class="stats">
+        <div><b>10</b><small>Questions</small></div>
+        <div><b>4</b><small>Choix par question</small></div>
+        <div><b>🏆</b><small>Score final</small></div>
+      </div>
     </section>
 
     <section id="quiz" class="panel hidden">
-      <div class="quiz-head"><span class="pill" id="questionCount">QUESTION 1/10</span><span class="score">⭐ <b id="score">0</b> pts</span></div>
+      <div class="quiz-head">
+        <span class="pill" id="questionCount">QUESTION 1/10</span>
+        <span class="score">⭐ <b id="score">0</b> pts</span>
+      </div>
+
       <div class="progress"><span id="progress"></span></div>
       <div class="eyebrow" id="category">CULTURE GÉNÉRALE</div>
       <h2 id="question">Question</h2>
       <div id="answers" class="answers"></div>
       <div id="feedback" class="feedback" aria-live="polite"></div>
-      <button id="nextBtn" class="primary hidden">QUESTION SUIVANTE →</button>
+
+      <button id="nextBtn" class="primary hidden">
+        QUESTION SUIVANTE →
+      </button>
       <button id="quitBtn" class="text-button">Quitter la partie</button>
     </section>
 
     <section id="result" class="panel hero hidden">
       <div class="eyebrow">🏁 PARTIE TERMINÉE</div>
       <h1 id="resultTitle">Bien joué !</h1>
-      <div class="result-score"><b id="finalScore">0</b><span>/ 100 points</span></div>
+      <div class="result-score">
+        <b id="finalScore">0</b>
+        <span>/ 100 points</span>
+      </div>
       <p id="resultText">Voici ton résultat.</p>
       <button id="againBtn" class="primary">REJOUER ↻</button>
       <button id="homeBtn" class="text-button">Retour à l'accueil</button>
     </section>
-    <footer> NEXO BOT · NEXO QUIZ <span>•</span> Version prototype</footer>
+
+    <footer>
+      NEXO BOT · NEXO QUIZ <span>•</span> Version prototype
+    </footer>
   </main>
-  <script src="game.js"></script>
+
+  <script type="module" src="./main.js"></script>
 </body>
 </html>
