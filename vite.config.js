@@ -1,7 +1,8 @@
+
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/nexo-quiz/",
+  base: "./",
   build: {
     outDir: "dist"
   }
